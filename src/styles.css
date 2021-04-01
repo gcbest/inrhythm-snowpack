@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #F15B21;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
