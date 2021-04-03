@@ -1,4 +1,3 @@
-import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 export function helloInRhythm() {
     const h1 = document.querySelector('h1');
@@ -7,7 +6,9 @@ export function helloInRhythm() {
     makeConfetti();
 }
 
-function makeConfetti() {
+async function makeConfetti() {
+    const confetti = await import (/* webpackIgnore: true */ 'https://cdn.skypack.dev/canvas-confetti');
+
     confetti.create(document.getElementById('canvas'), {
         resize: true,
         useWorker: true,
